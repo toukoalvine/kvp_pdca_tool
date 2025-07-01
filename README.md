@@ -62,6 +62,7 @@ Eine Streamlit-Anwendung zur Verwaltung von kontinuierlichen Verbesserungsprozes
 3. **Abhängigkeiten installieren**
    ```bash
    pip install -r requirements.txt
+   pip install streamlit plotly
    ```
 
 4. **Anwendung starten**
