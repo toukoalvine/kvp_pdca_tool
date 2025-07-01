@@ -42,11 +42,7 @@ Eine Streamlit-Anwendung zur Verwaltung von kontinuierlichen Verbesserungsprozes
 ### Schritt-für-Schritt Installation
 
 1. **Repository klonen oder Dateien herunterladen**
-   ```bash
-   # Dateien in einen neuen Ordner kopieren
-   mkdir kvp-tool
-   cd kvp-tool
-   ```
+ 
 
 2. **Virtuelle Umgebung erstellen (empfohlen)**
    ```bash
