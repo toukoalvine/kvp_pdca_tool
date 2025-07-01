@@ -66,6 +66,7 @@ Eine Streamlit-Anwendung zur Verwaltung von kontinuierlichen Verbesserungsprozes
    ```bash
    pip install -r requirements.txt
    pip install streamlit plotly
+   pip install plotly
    ```
 
 4. **Anwendung starten**
