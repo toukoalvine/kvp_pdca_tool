@@ -2,37 +2,161 @@
 Tool zur Verfolgung von Verbesserungsprojekten
 # 📊 KVP/PDCA Tool – Kontinuierlicher Verbesserungsprozess
 
-Ein visuelles Dashboard-Tool für das Management und die Analyse von kontinuierlichen Verbesserungsprojekten basierend auf dem PDCA-Zyklus (Plan–Do–Check–Act). Entwickelt mit [Streamlit](https://streamlit.io), ideal für Qualitäts-, Lean- und Produktionsumgebungen.
+# KVP/PDCA Tool - Kontinuierliche Verbesserung
 
----
+Eine Streamlit-Anwendung zur Verwaltung von kontinuierlichen Verbesserungsprozessen (KVP) basierend auf dem PDCA-Zyklus (Plan-Do-Check-Act).
 
-## ✅ Funktionen
+## 🚀 Features
 
-- Interaktives Dashboard mit KPIs (Projekte, Aufgaben, Abschlussrate, Einsparungen)
-- Visualisierung von Projektstatus und Fortschritt über Zeit
-- Projekt- und Aufgabenverwaltung nach PDCA-Phasen
-- Kommentarfunktion für Zusammenarbeit
-- Benutzerfreundliches UI mit responsivem Design
-- Dynamische Fortschrittsanzeige und Status-Badges
-- CSS-basiertes Layout im Corporate Style
+### Dashboard
+- **KPI-Übersicht**: Zentrale Kennzahlen auf einen Blick
+- **Fortschrittsvisualisierung**: Interaktive Charts und Diagramme
+- **PDCA-Zyklusübersicht**: Status aller PDCA-Phasen
+- **Echtzeit-Metriken**: Aktuelle Projektdaten und Trends
 
----
+### Projektverwaltung
+- **Projekterfassung**: Neue Verbesserungsprojekte anlegen
+- **Kategorisierung**: Nach Qualität, Effizienz, Kosten, Sicherheit, Umwelt
+- **Prioritätsverwaltung**: Hoch, Mittel, Niedrig
+- **Fortschrittstracking**: Überwachung des Projektstatus
+- **Einsparungsberechnung**: Erwartete vs. tatsächliche Einsparungen
+
+### Aufgabenverwaltung
+- **PDCA-Integration**: Aufgaben den PDCA-Phasen zuordnen
+- **Verantwortlichkeiten**: Klare Zuweisung von Aufgaben
+- **Fälligkeitsdaten**: Terminüberwachung
+- **Kommentarsystem**: Team-Kommunikation zu Aufgaben
+
+### Analytics & Reporting
+- **Erfolgsraten**: Analyse nach Kategorien
+- **Zeitseries-Analysen**: Fortschritt über Zeit
+- **Einsparungsanalyse**: Finanzielle Auswirkungen
+- **Exportfunktionen**: Datenexport für weitere Analysen
 
 ## 🛠️ Installation
 
 ### Voraussetzungen
-
 - Python 3.8 oder höher
-- pip
+- pip (Python Package Manager)
 
-### Installation
+### Schritt-für-Schritt Installation
 
-1. Projekt klonen:
+1. **Repository klonen oder Dateien herunterladen**
+   ```bash
+   # Dateien in einen neuen Ordner kopieren
+   mkdir kvp-tool
+   cd kvp-tool
+   ```
 
-```bash
-git clone https://github.com/dein-benutzername/kvp-pdca-tool.git
-cd kvp-pdca-tool
+2. **Virtuelle Umgebung erstellen (empfohlen)**
+   ```bash
+   python -m venv venv
+   
+   # Windows
+   venv\Scripts\activate
+   
+   # macOS/Linux
+   source venv/bin/activate
+   ```
 
-pip install -r requirements.txt
-streamlit run main.py
+3. **Abhängigkeiten installieren**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
+4. **Anwendung starten**
+   ```bash
+   streamlit run app.py
+   ```
+
+5. **Browser öffnen**
+   - Die Anwendung öffnet sich automatisch unter `http://localhost:8501`
+   - Falls nicht, URL manuell im Browser eingeben
+
+## 📋 Verwendung
+
+### Erste Schritte
+
+1. **Dashboard erkunden**
+   - Überblick über alle KPIs und Metriken
+   - PDCA-Zyklusübersicht verstehen
+
+2. **Erstes Projekt anlegen**
+   - Zu "Projekte" navigieren
+   - "Neues Projekt erstellen" klicken
+   - Alle relevanten Daten eingeben
+
+3. **Aufgaben verwalten**
+   - Aufgaben zu Projekten hinzufügen
+   - PDCA-Phasen zuweisen
+   - Verantwortlichkeiten definieren
+
+4. **Fortschritt verfolgen**
+   - Analytics-Bereich für Auswertungen nutzen
+   - Regelmäßige Aktualisierung der Projektdaten
+
+### Navigation
+
+**Sidebar Navigation:**
+- **Dashboard**: Hauptübersicht mit KPIs und Charts
+- **Projekte**: Projektverwaltung und -erstellung
+- **Aufgaben**: Aufgabenverwaltung mit PDCA-Integration
+- **Analytics**: Detaillierte Analysen und Reports
+
+**Filter:**
+- Status-Filter: Neue, In Bearbeitung, Review, Abgeschlossen
+- Prioritäts-Filter: Hoch, Mittel, Niedrig
+- Datum-Filter: Zeitraumbasierte Filterung
+
+### PDCA-Integration
+
+**Plan (Planen):**
+- Problemanalyse
+- Zieldefinition
+- Maßnahmenplanung
+
+**Do (Umsetzen):**
+- Umsetzung der geplanten Maßnahmen
+- Datensammlung während der Umsetzung
+
+**Check (Überprüfen):**
+- Ergebnisse bewerten
+- Zielerreichung prüfen
+- Abweichungsanalyse
+
+**Act (Handeln):**
+- Standardisierung erfolgreicher Maßnahmen
+- Anpassung bei Abweichungen
+- Kontinuierliche Verbesserung
+
+## 🔧 Konfiguration
+
+### Anpassungen
+
+**Session State:**
+Die Anwendung verwendet Session State für Datenpersistenz. Daten gehen beim Schließen der Anwendung verloren.
+
+**Datenbankintegration:**
+Für produktive Nutzung empfiehlt sich die Integration einer Datenbank (SQLite, PostgreSQL, etc.).
+
+**Authentifizierung:**
+Für Multi-User-Umgebungen kann Streamlit-Authenticator integriert werden.
+
+### Umgebungsvariablen
+
+Erstellen Sie eine `.env` Datei für konfigurierbare Parameter:
+```
+APP_TITLE=KVP/PDCA Tool
+DATABASE_URL=sqlite:///kvp.db
+DEBUG=False
+```
+
+## 📊 Datenstruktur
+
+### Projekte
+```python
+{
+    'id': int,
+    'name': str,
+    'category': str,  # Qualität, Effizienz, Kosten, Sicherheit, Umwelt
+    'priority': str,  # high, medium
