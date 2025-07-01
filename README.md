@@ -57,6 +57,9 @@ Eine Streamlit-Anwendung zur Verwaltung von kontinuierlichen Verbesserungsprozes
    
    # macOS/Linux
    source venv/bin/activate
+   
+   \home\adminuser\venv\Scripts\activate
+
    ```
 
 3. **Abhängigkeiten installieren**
